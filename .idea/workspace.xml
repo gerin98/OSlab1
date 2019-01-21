@@ -11,8 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10ae17de-7999-41f4-80bc-ae50021c77c3" name="Default Changelist" comment="&quot;fixed function parametes for wc_output&quot;">
+    <list default="true" id="10ae17de-7999-41f4-80bc-ae50021c77c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/hashtable.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hashtable.exe" afterDir="false" />
@@ -72,17 +73,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="GDB" value="202" />
-          <entry key="c" value="9183" />
+          <entry key="c" value="9254" />
           <entry key="h" value="4" />
-          <entry key="txt" value="90" />
+          <entry key="txt" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
           <entry key="GDBCommands" value="202" />
-          <entry key="ObjectiveC" value="9187" />
-          <entry key="PLAIN_TEXT" value="89" />
+          <entry key="ObjectiveC" value="9258" />
+          <entry key="PLAIN_TEXT" value="156" />
         </counts>
       </usages-collector>
     </session>
@@ -97,20 +98,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="179" column="29" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
+            <state relative-caret-position="187">
+              <caret line="45" selection-start-line="45" selection-start-column="2" selection-end-line="50" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#260#267#0" />
                 <element signature="e#983#1050#1" />
                 <element signature="e#1069#1109#1" />
-                <element signature="e#2207#2421#0" />
                 <element signature="e#2466#4538#1" />
                 <element signature="e#3166#3508#0" />
                 <element signature="e#4693#5598#0" />
                 <element signature="e#5546#7150#1" />
                 <element signature="e#7276#7376#0" />
-                <element signature="e#7378#7609#0" />
+                <element signature="e#7512#7541#0" />
                 <element signature="e#7611#7846#0" />
               </folding>
             </state>
@@ -231,7 +231,7 @@
       <workItem from="1547519838329" duration="31011000" />
       <workItem from="1547677916378" duration="10800000" />
       <workItem from="1547758644940" duration="32151000" />
-      <workItem from="1548079854429" duration="8042000" />
+      <workItem from="1548079854429" duration="12426000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;made a global copy of the word_array&quot;">
       <created>1548086197014</created>
@@ -247,11 +247,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548086382394</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;changed formatting for output&quot;">
+      <created>1548091419060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548091419060</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89717000" />
+    <option name="totallyTimeSpent" value="94101000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -271,13 +278,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.7188612" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.66014236" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48576513" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291815" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3291815" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.28291816" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291815" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291815" />
@@ -324,7 +331,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;made a global copy of the word_array&quot;" />
     <MESSAGE value="&quot;fixed function parametes for wc_output&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;fixed function parametes for wc_output&quot;" />
+    <MESSAGE value="&quot;changed formatting for output&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;changed formatting for output&quot;" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -350,20 +358,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="179" column="29" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
+        <state relative-caret-position="187">
+          <caret line="45" selection-start-line="45" selection-start-column="2" selection-end-line="50" selection-end-column="24" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#260#267#0" />
             <element signature="e#983#1050#1" />
             <element signature="e#1069#1109#1" />
-            <element signature="e#2207#2421#0" />
             <element signature="e#2466#4538#1" />
             <element signature="e#3166#3508#0" />
             <element signature="e#4693#5598#0" />
             <element signature="e#5546#7150#1" />
             <element signature="e#7276#7376#0" />
-            <element signature="e#7378#7609#0" />
+            <element signature="e#7512#7541#0" />
             <element signature="e#7611#7846#0" />
           </folding>
         </state>

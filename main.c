@@ -43,50 +43,51 @@ struct wc{
 };
 
 /* function prototypes */
-struct wc *wc_init(char*, long);
-bool check_available(struct wc*, uint32_t, uint32_t, char*);
-void wc_output(struct wc *);
-void wc_destroy(struct wc*);
-unsigned long hash1(char*);
-uint32_t hash2(char*);
+//struct wc *wc_init(char*, long);
+//bool check_available(struct wc*, uint32_t, uint32_t, char*);
+//void wc_output(struct wc *);
+//void wc_destroy(struct wc*);
+//unsigned long hash1(char*);
+//uint32_t hash2(char*);
 
-int main() {
-    char str[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
-
-    // need to remove this later
-    /*
-        size_t inputSize = strlen(str);
-        printf("\nInput String Size: %d\n\n", inputSize);
-    */
-    struct wc* myHashTable = wc_init(str, 997);
-    if(myHashTable == NULL){
-        return(-1);
-    }
-
-    wc_output(myHashTable);
-    wc_destroy(myHashTable);
-
-    // print out elements in the hashtable (testing purposes)
-    /*
-    for(int j = 0; j < table_size; j++){
-        if(myHashTable->entry[j].word != NULL){
-            printf("%d: %s, %d\n", j, myHashTable->entry[j].word, myHashTable->entry[j].count);
-        }
-    }
-    */
-
-    return 0;
-}
+//int main() {
+//    char str[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
+//
+//    // need to remove this later
+//    /*
+//        size_t inputSize = strlen(str);
+//        printf("\nInput String Size: %d\n\n", inputSize);
+//    */
+//    struct wc* myHashTable = wc_init(str, 997);
+//    if(myHashTable == NULL){
+//        return(-1);
+//    }
+//
+//    wc_output(myHashTable);
+//    wc_destroy(myHashTable);
+//
+//    // print out elements in the hashtable (testing purposes)
+//    /*
+//    for(int j = 0; j < table_size; j++){
+//        if(myHashTable->entry[j].word != NULL){
+//            printf("%d: %s, %d\n", j, myHashTable->entry[j].word, myHashTable->entry[j].count);
+//        }
+//    }
+//    */
+//
+//    return 0;
+//}
 
 /* initialize hash table */
 struct wc *wc_init(char *word_array, long size){
 
-    struct wc *hashtable;
-    hashtable = (struct wc*)malloc(sizeof(struct wc));
+    struct wc *wc;
+    wc = (struct wc*)malloc(sizeof(struct wc));
+    assert(wc);
 
-    hashtable->entry = (struct wc_entry*)calloc((size_t )table_size, sizeof(*hashtable->entry));
+    wc->entry = (struct wc_entry*)calloc((size_t )table_size, sizeof(*wc->entry));
 
-    if(hashtable->entry == NULL){
+    if(wc->entry == NULL){
         printf("Calloc failed");
         return NULL;
     }
@@ -100,17 +101,18 @@ struct wc *wc_init(char *word_array, long size){
     /*
         for(int j = 0; j < table_size; j++){
             printf("%d.", j);
-            if(hashtable->entry[j].word == NULL)
+            if(wc->entry[j].word == NULL)
                 printf("NULL ");
-            if(hashtable->entry[j].count == 0)
+            if(wc->entry[j].count == 0)
                 printf("0 ");
-            if(hashtable->entry[j].checked == false)
+            if(wc->entry[j].checked == false)
                 printf("false \n");
         }
     */
 
     char *token;
-    token = strtok(oldstr, " ");
+    char delimit[]="\n , ;";
+    token = strtok(oldstr, delimit);
     // walk through other tokens
     while( token != NULL ) {
 
@@ -118,20 +120,20 @@ struct wc *wc_init(char *word_array, long size){
         uint32_t hash_code = hash2(token);
         hash_code = hash_code % table_size;
 
-        if(hashtable->entry[hash_code].word == NULL) {      //nothing in the hashtable
-            hashtable->entry[hash_code].word = strdup(token);
-            hashtable->entry[hash_code].count++;
+        if(wc->entry[hash_code].word == NULL) {      //nothing in the wc
+            wc->entry[hash_code].word = strdup(token);
+            wc->entry[hash_code].count++;
         }
-        else if(!strcmp(hashtable->entry[hash_code].word, token)){     //duplicate in the hashtable
-            hashtable->entry[hash_code].count++;
+        else if(!strcmp(wc->entry[hash_code].word, token)){     //duplicate in the wc
+            wc->entry[hash_code].count++;
         }       //check corner case when key is occupied so data is placed at next available key
-        else{       //some other word in the hashtable
-            bool insert_success = check_available(hashtable, hash_code, hash_code, token);
+        else{       //some other word in the wc
+            bool insert_success = check_available(wc, hash_code, hash_code, token);
             if(!insert_success){
-                //ran out of space in the hashtable
+                //ran out of space in the wc
                 printf("Hashtable Full!!! \n");
                 printf("Can't Insert: %s \n", token);
-                return hashtable;
+                return wc;
             }
         }
         token = strtok(NULL, " ");
@@ -140,7 +142,7 @@ struct wc *wc_init(char *word_array, long size){
     //free the copy of the string
     free(oldstr);
 
-    return hashtable;
+    return wc;
 }
 
 /* find empty space in hashtable */
@@ -242,18 +244,18 @@ void wc_destroy(struct wc *wc){
     free(wc);
 }
 
-/* primary hash function */
-unsigned long hash1(char *str){
-    unsigned long hash = 5381;
-    int c;
-
-    while (c = *str++)
-        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-
-    hash = hash % 1009;
-
-    return hash;
-}
+///* primary hash function */
+//unsigned long hash1(char *str){
+//    unsigned long hash = 5381;
+//    int c;
+//
+//    while (c = *str++)
+//        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+//
+//    hash = hash % 1009;
+//
+//    return hash;
+//}
 
 /* secondary hash function */
 uint32_t hash2(char* str){
