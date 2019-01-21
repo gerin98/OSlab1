@@ -44,7 +44,7 @@ struct wc{
 /* function prototypes */
 struct wc *wc_init(char*, long);
 bool check_available(struct wc*, uint32_t, uint32_t, char*);
-void wc_output(struct wc *, char *);
+void wc_output(struct wc *);
 void wc_destroy(struct wc*);
 unsigned long hash1(char*);
 uint32_t hash2(char*);
@@ -62,7 +62,7 @@ int main() {
         return(-1);
     }
 
-    wc_output(myHashTable, str2);
+    wc_output(myHashTable);
 
     wc_destroy(myHashTable);
 
@@ -177,7 +177,7 @@ bool check_available(struct wc *hashtable, uint32_t hash_code, uint32_t original
 }
 
 /* print the occurrences for each word in the hashtable */
-void wc_output(struct wc *wc, char *word_array){
+void wc_output(struct wc *wc){
 
     char* curr_word = "";
     int curr_occurrence = 0;
@@ -185,8 +185,10 @@ void wc_output(struct wc *wc, char *word_array){
     uint32_t offset = 0;
     uint32_t original_hash_code;
 
+
+
     char *token;
-    token = strtok(word_array, " ");
+    token = strtok(word_arrayGlobal, " ");
     // walk through other tokens
     while( token != NULL ) {
 

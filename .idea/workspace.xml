@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10ae17de-7999-41f4-80bc-ae50021c77c3" name="Default Changelist" comment="" />
+    <list default="true" id="10ae17de-7999-41f4-80bc-ae50021c77c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,15 +44,15 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="c" value="2" />
+          <entry key="c" value="3" />
           <entry key="h" value="2" />
-          <entry key="hashtable (disassembly)" value="20" />
+          <entry key="hashtable (disassembly)" value="24" />
           <entry key="ts" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -58,15 +60,15 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="Disassembly" value="20" />
-          <entry key="ObjectiveC" value="4" />
+          <entry key="Disassembly" value="24" />
+          <entry key="ObjectiveC" value="5" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="GDB" value="202" />
-          <entry key="c" value="8606" />
+          <entry key="c" value="9011" />
           <entry key="h" value="4" />
           <entry key="txt" value="1" />
         </counts>
@@ -75,7 +77,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="1" />
           <entry key="GDBCommands" value="202" />
-          <entry key="ObjectiveC" value="8610" />
+          <entry key="ObjectiveC" value="9015" />
         </counts>
       </usages-collector>
     </session>
@@ -90,19 +92,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state relative-caret-position="281">
+              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#260#267#0" />
-                <element signature="e#313#362#1" />
-                <element signature="e#748#798#1" />
-                <element signature="e#2425#2767#0" />
-                <element signature="e#3212#4094#0" />
-                <element signature="e#6649#6674#0" />
-                <element signature="e#7400#7631#0" />
-                <element signature="e#7633#7868#0" />
+                <element signature="e#983#1050#1" />
+                <element signature="e#1069#1109#1" />
+                <element signature="e#1350#2756#0" />
+                <element signature="e#3166#3508#0" />
+                <element signature="e#4693#5598#0" />
+                <element signature="e#7276#7376#0" />
+                <element signature="e#7378#7609#0" />
+                <element signature="e#7611#7846#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;7b30bcdd-1561-4528-ae76-e0f8d864d5a3&gt;/ece344/warmup/wc.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -112,7 +124,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>hashtable</find>
+      <find>word_array</find>
+      <find>size</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.c" root0="FORCE_HIGHLIGHTING" />
@@ -135,10 +152,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -224,11 +242,12 @@
       <workItem from="1547519838329" duration="31011000" />
       <workItem from="1547677916378" duration="10800000" />
       <workItem from="1547758644940" duration="32151000" />
+      <workItem from="1548079854429" duration="5569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81675000" />
+    <option name="totallyTimeSpent" value="87244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -241,13 +260,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34907252" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6975089" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7188612" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48576513" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -256,7 +276,7 @@
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3291815" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291815" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3291815" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291815" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3291815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -267,6 +287,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -295,18 +341,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="281">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#260#267#0" />
-            <element signature="e#313#362#1" />
-            <element signature="e#748#798#1" />
-            <element signature="e#2425#2767#0" />
-            <element signature="e#3212#4094#0" />
-            <element signature="e#6649#6674#0" />
-            <element signature="e#7400#7631#0" />
-            <element signature="e#7633#7868#0" />
+            <element signature="e#983#1050#1" />
+            <element signature="e#1069#1109#1" />
+            <element signature="e#1350#2756#0" />
+            <element signature="e#3166#3508#0" />
+            <element signature="e#4693#5598#0" />
+            <element signature="e#7276#7376#0" />
+            <element signature="e#7378#7609#0" />
+            <element signature="e#7611#7846#0" />
           </folding>
         </state>
       </provider>
