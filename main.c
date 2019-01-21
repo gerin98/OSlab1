@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <assert.h>
 #include <malloc.h>
-#include <mem.h>
 #include <limits.h>
 #include <inttypes.h>
 #include <stdbool.h>
+#include <string.h>
 
 /* http://www.isthe.com/chongo/tech/comp/fnv/#FNV-param */
 #define FNV_prime 16777619
@@ -54,9 +54,10 @@ int main() {
     char str[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
 
     // need to remove this later
-    size_t inputSize = strlen(str);
-    printf("\nInput String Size: %d\n\n", inputSize);
-
+    /*
+        size_t inputSize = strlen(str);
+        printf("\nInput String Size: %d\n\n", inputSize);
+    */
     struct wc* myHashTable = wc_init(str, 997);
     if(myHashTable == NULL){
         return(-1);
@@ -226,7 +227,7 @@ void wc_output(struct wc *wc){
             curr_word = wc->entry[hash_code + offset].word;
             curr_occurrence = wc->entry[hash_code + offset].count;
             wc->entry[hash_code + offset].checked = true;
-            printf("%s: %d \n", curr_word, curr_occurrence);
+            printf("%s:%d\n", curr_word, curr_occurrence);
             offset = 0;
         }
 
