@@ -25,8 +25,9 @@
 // ☑ CORNER CASE: try to print words that did not originally fit into the hashtable
 // - currently 2 strings in main, need to make it 1 (first one doesn't get passed to print function)
 
-/* global functions (for testing purposes only) */
+/* global functions (for testing purposes only), 997 is a prime number */
 int table_size = 997;
+char* word_arrayGlobal;
 
 /* entry into hash table */
 struct wc_entry{
@@ -52,7 +53,11 @@ int main() {
     char str[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
     char str2[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
 
-    struct wc* myHashTable = wc_init(str, 80);
+    size_t inputSize = strlen(str);
+
+    printf("\nInput String Size: %d\n\n", inputSize);
+
+    struct wc* myHashTable = wc_init(str, 997);
     if(myHashTable == NULL){
         return(-1);
     }
@@ -85,6 +90,11 @@ struct wc *wc_init(char *word_array, long size){
         return NULL;
     }
 
+    //make a copy of the string to use
+    char *oldstr = malloc(strlen(word_array) + 1);
+    strcpy(oldstr, word_array);
+    word_arrayGlobal = word_array;
+
     //check if calloc initializes to zero properly
     /*
         for(int j = 0; j < table_size; j++){
@@ -99,7 +109,7 @@ struct wc *wc_init(char *word_array, long size){
     */
 
     char *token;
-    token = strtok(word_array, " ");
+    token = strtok(oldstr, " ");
     // walk through other tokens
     while( token != NULL ) {
 
@@ -125,6 +135,9 @@ struct wc *wc_init(char *word_array, long size){
         }
         token = strtok(NULL, " ");
     }
+
+    //free the copy of the string
+    free(oldstr);
 
     return hashtable;
 }
@@ -170,7 +183,7 @@ void wc_output(struct wc *wc, char *word_array){
     int curr_occurrence = 0;
     uint32_t hash_code;
     uint32_t offset = 0;
-    uint32_t  original_hash_code;
+    uint32_t original_hash_code;
 
     char *token;
     token = strtok(word_array, " ");
