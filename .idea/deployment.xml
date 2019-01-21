@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="ug249.eecg.utoronto.ca">
+    <serverData>
+      <paths name="ug249.eecg.utoronto.ca">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/ece344/warmup" local="$PROJECT_DIR$" web="/nfs/ug/homes-0/a/amalaraj/ece344/warmup" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/gerin/CLionProjects/hashtable/main.c
+stdio.h
+-
+assert.h
+-
+malloc.h
+-
+mem.h
+-
+limits.h
+-
+inttypes.h
+-
+stdbool.h
+-
+

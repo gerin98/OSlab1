@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7b30bcdd-1561-4528-ae76-e0f8d864d5a3" name="ug249.eecg.utoronto.ca" url="http://ug230.eecg.utoronto.ca">
+        <fileTransfer host="ug230.eecg.utoronto.ca" port="22" rootFolder="/nfs/ug/homes-0/a/amalaraj" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
