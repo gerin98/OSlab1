@@ -24,6 +24,7 @@
 // ☑ CORNER CASE: where there are more words than spaces (basically checking if hashtable is full)
 // ☑ CORNER CASE: try to print words that did not originally fit into the hashtable
 // - currently 2 strings in main, need to make it 1 (first one doesn't get passed to print function)
+// - currently copying all strings, may have to change strtok to a while loop for performance
 
 /* global functions (for testing purposes only), 997 is a prime number */
 int table_size = 997;
@@ -51,10 +52,9 @@ uint32_t hash2(char*);
 
 int main() {
     char str[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
-    char str2[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
 
+    // need to remove this later
     size_t inputSize = strlen(str);
-
     printf("\nInput String Size: %d\n\n", inputSize);
 
     struct wc* myHashTable = wc_init(str, 997);
@@ -63,16 +63,16 @@ int main() {
     }
 
     wc_output(myHashTable);
-
     wc_destroy(myHashTable);
 
-//    // print out elements in the hashtable
-//    for(int j = 0; j < table_size; j++){
-//        if(myHashTable->entry[j].word != NULL){
-//            printf("%d: %s, %d\n", j, myHashTable->entry[j].word, myHashTable->entry[j].count);
-//        }
-//    }
-
+    // print out elements in the hashtable (testing purposes)
+    /*
+    for(int j = 0; j < table_size; j++){
+        if(myHashTable->entry[j].word != NULL){
+            printf("%d: %s, %d\n", j, myHashTable->entry[j].word, myHashTable->entry[j].count);
+        }
+    }
+    */
 
     return 0;
 }
@@ -185,10 +185,11 @@ void wc_output(struct wc *wc){
     uint32_t offset = 0;
     uint32_t original_hash_code;
 
-
+    char *oldstr = malloc(strlen(word_arrayGlobal) + 1);
+    strcpy(oldstr, word_arrayGlobal);
 
     char *token;
-    token = strtok(word_arrayGlobal, " ");
+    token = strtok(oldstr, " ");
     // walk through other tokens
     while( token != NULL ) {
 
@@ -196,7 +197,7 @@ void wc_output(struct wc *wc){
         hash_code = hash2(token) % table_size;
         original_hash_code = hash_code;
 
-        //search the token in the wc
+        //search for the token in the wc
         while ( (wc->entry[hash_code + offset].word != NULL) && (strcmp(wc->entry[hash_code + offset].word, token) != 0) ){
             offset++;
 
