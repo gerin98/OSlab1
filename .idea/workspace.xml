@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="10ae17de-7999-41f4-80bc-ae50021c77c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/hashtable.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/hashtable.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/hashtable.exe" afterDir="false" />
@@ -45,17 +44,18 @@
     <session id="1545276650">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="c" value="3" />
+          <entry key="c" value="8" />
           <entry key="h" value="2" />
           <entry key="hashtable (disassembly)" value="26" />
           <entry key="ts" value="1" />
@@ -66,16 +66,16 @@
         <counts>
           <entry key="CMakeLists.txt" value="1" />
           <entry key="Disassembly" value="26" />
-          <entry key="ObjectiveC" value="5" />
+          <entry key="ObjectiveC" value="10" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="GDB" value="202" />
-          <entry key="c" value="11903" />
+          <entry key="c" value="12246" />
           <entry key="h" value="4" />
-          <entry key="txt" value="210" />
+          <entry key="txt" value="271" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -83,50 +83,80 @@
           <entry key="CMakeLists.txt" value="1" />
           <entry key="Doxygen file" value="10" />
           <entry key="GDBCommands" value="202" />
-          <entry key="ObjectiveC" value="11897" />
-          <entry key="PLAIN_TEXT" value="209" />
+          <entry key="ObjectiveC" value="12240" />
+          <entry key="PLAIN_TEXT" value="270" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="272" column="12" selection-start-line="272" selection-start-column="12" selection-end-line="272" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#282#290#0" />
-                <element signature="e#1198#1265#1" />
-                <element signature="e#1284#1324#1" />
-                <element signature="e#1557#3690#0" />
-                <element signature="e#3266#6843#0" />
-                <element signature="e#3628#3949#0" />
-                <element signature="e#5594#6784#0" />
-                <element signature="e#7318#9085#0" />
-                <element signature="e#8111#9085#0" />
-                <element signature="e#5132#6037#0" />
-                <element signature="e#8781#8986#1" />
-                <element signature="e#10244#10277#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5748988">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                    <element signature="e#282#290#0" />
+                    <element signature="e#6737#8840#0" />
+                    <element signature="e#8842#9064#0" />
+                    <element signature="e#9066#9968#0" />
+                    <element signature="e#10033#10932#0" />
+                    <element signature="e#10934#11169#0" />
+                    <element signature="e#11199#11232#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="true" current-in-tab="true">
+            <entry file="remoteDeploymentFS://&lt;7b30bcdd-1561-4528-ae76-e0f8d864d5a3&gt;/ece344/warmup/wc.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1511">
+                  <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#683#752#1" />
+                    <element signature="e#771#877#1" />
+                    <element signature="e#3313#5504#0" />
+                    <element signature="e#5506#5699#0" />
+                    <element signature="e#5702#6604#0" />
+                    <element signature="e#6669#7568#0" />
+                    <element signature="e#7570#7805#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>hashtable</find>
       <find>word_array</find>
       <find>size</find>
+      <find>numbers</find>
+      <find>(or</find>
+      <find>)</find>
+      <find>or</find>
+      <find>.</find>
+      <find>,</find>
+      <find>order</find>
+      <find>prime</find>
+      <find>where</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,6 +172,7 @@
         <option value="$PROJECT_DIR$/cmake-build-debug/wc.c" />
         <option value="$PROJECT_DIR$/wc.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="&lt;7b30bcdd-1561-4528-ae76-e0f8d864d5a3&gt;/ece344/warmup/wc.c" />
         <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
@@ -155,7 +186,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="846" />
     <option name="width" value="981" />
-    <option name="height" value="986" />
+    <option name="height" value="987" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,7 +257,8 @@
       <workItem from="1547677916378" duration="10800000" />
       <workItem from="1547758644940" duration="32151000" />
       <workItem from="1548079854429" duration="15412000" />
-      <workItem from="1548127328920" duration="14285000" />
+      <workItem from="1548127328920" duration="15510000" />
+      <workItem from="1548267991882" duration="4470000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;made a global copy of the word_array&quot;">
       <created>1548086197014</created>
@@ -256,11 +288,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548095301475</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;freed strings in wc_entry and replaced strok with a for loop&quot;">
+      <created>1548254662227</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1548254662227</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111372000" />
+    <option name="totallyTimeSpent" value="117067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -278,6 +317,7 @@
       <window_info content_ui="combo" id="Project" order="0" weight="0.34907252" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" weight="0.32924694" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32749563" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41155866" />
@@ -335,7 +375,8 @@
     <MESSAGE value="&quot;fixed function parametes for wc_output&quot;" />
     <MESSAGE value="&quot;changed formatting for output&quot;" />
     <MESSAGE value="&quot;commented out main and function prototypes for testing&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;commented out main and function prototypes for testing&quot;" />
+    <MESSAGE value="&quot;freed strings in wc_entry and replaced strok with a for loop&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;freed strings in wc_entry and replaced strok with a for loop&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -372,22 +413,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="272" column="12" selection-start-line="272" selection-start-column="12" selection-end-line="272" selection-end-column="12" />
+        <state relative-caret-position="136">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#282#290#0" />
-            <element signature="e#1198#1265#1" />
-            <element signature="e#1284#1324#1" />
-            <element signature="e#1557#3690#0" />
-            <element signature="e#3266#6843#0" />
-            <element signature="e#3628#3949#0" />
-            <element signature="e#5594#6784#0" />
-            <element signature="e#7318#9085#0" />
-            <element signature="e#8111#9085#0" />
-            <element signature="e#5132#6037#0" />
-            <element signature="e#8781#8986#1" />
-            <element signature="e#10244#10277#0" />
+            <element signature="e#6737#8840#0" />
+            <element signature="e#8842#9064#0" />
+            <element signature="e#9066#9968#0" />
+            <element signature="e#10033#10932#0" />
+            <element signature="e#10934#11169#0" />
+            <element signature="e#11199#11232#0" />
           </folding>
         </state>
       </provider>

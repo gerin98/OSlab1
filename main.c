@@ -33,7 +33,7 @@
 /*            GLOBAL VARIABLES                 */
 /////////////////////////////////////////////////
 
-int table_size = 997;   //997 is a prime number
+const int table_size = 3001;   //997 is a prime number
 char* word_arrayGlobal;
 
 /////////////////////////////////////////////////
@@ -74,8 +74,7 @@ uint32_t hash2(char*);
 /////////////////////////////////////////////////
 
 int main() {
-    char str[500] = "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
-
+    char str[500] = " \"where\" A \"prime\"number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. By Euclid's theorem, there are an infinite number of prime numbers. Subsets of the prime numbers may be generated with various formulas for primes. The first 1000 primes are listed below, followed by lists of notable types of prime numbers in alphabetical order, giving their respective first terms. 1 is neither prime nor composite.";
     struct wc* myHashTable = wc_init(str, 451);
     if(myHashTable == NULL){
         return(-1);
@@ -103,6 +102,8 @@ struct wc *wc_init(char *word_array, long size){
     }
 
     //make the input string available globally
+    char *oldstr = malloc(strlen(word_array) + 1);
+    strcpy(oldstr, word_array);
     word_arrayGlobal = word_array;
 
     //check if calloc initializes to zero properly
@@ -122,55 +123,55 @@ struct wc *wc_init(char *word_array, long size){
     ////////////////////////////////////////////////////////////////////////
 
     //obtain words from the input string
-    int start = 0;
-    for(int end = 0; end < size; end++){
-
-        //check if first character is a space
-        if(isspace(word_array[start]) != 0)
-        {
-            //starting point is a white space so increment it and reset end index
-            end = start;
-            start++;
-            continue;
-        }
-
-        //check if current character is a space
-        int test = isspace(word_array[end]);
-
-        if(test == 0){
-            //no white space
-            //do nothing
-        }
-        else{
-            //white space
-            size_t size_word = (size_t)(end - start) ;
-            char* substr = malloc((size_word+1) * sizeof(char));
-            strncpy(substr, word_array+start, size_word);
-            substr[size_word] = '\0';
-
-            //insert into the hashtable
-            insertHashtable(wc, substr);
-
-            //move start index to the next character
-            start = end + 1;
-        }
-    }
-    if(start < size){
-        //last word was not obtained from word_string because no space at the end
-        size_t size_word = (size_t)(size - start);
-        char* substr = malloc((size_word+1) * sizeof(char));
-        strncpy(substr, word_array+start, size_word);
-        substr[size_word] = '\0';
-
-        //insert into the hashtable
-        insertHashtable(wc, substr);
-    }
+//    int start = 0;
+//    for(int end = 0; end < size; end++){
+//
+//        //check if first character is a space
+//        if(isspace(word_array[start]) != 0)
+//        {
+//            //starting point is a white space so increment it and reset end index
+//            end = start;
+//            start++;
+//            continue;
+//        }
+//
+//        //check if current character is a space
+//        int test = isspace(word_array[end]);
+//
+//        if(test == 0){
+//            //no white space
+//            //do nothing
+//        }
+//        else{
+//            //white space
+//            size_t size_word = (size_t)(end - start) ;
+//            char* substr = malloc((size_word+1) * sizeof(char));
+//            strncpy(substr, word_array+start, size_word);
+//            substr[size_word] = '\0';
+//
+//            //insert into the hashtable
+//            insertHashtable(wc, substr);
+//
+//            //move start index to the next character
+//            start = end + 1;
+//        }
+//    }
+//    if(start < size){
+//        //last word was not obtained from word_string because no space at the end
+//        size_t size_word = (size_t)(size - start);
+//        char* substr = malloc((size_word+1) * sizeof(char));
+//        strncpy(substr, word_array+start, size_word);
+//        substr[size_word] = '\0';
+//
+//        //insert into the hashtable
+//        insertHashtable(wc, substr);
+//    }
     ////////////////////////////////////////////////////////////////////////
 
-    //old code
-/*
+    //old code but currently using this
+
     char *token;
-    char delimit[]="\n , ;";
+    char delimit[]=" \t\r\n\v\f().,!?:;\"/\\";
     token = strtok(oldstr, delimit);
     // walk through other tokens
     while( token != NULL ) {
@@ -195,13 +196,11 @@ struct wc *wc_init(char *word_array, long size){
                 return wc;
             }
         }
-        token = strtok(NULL, " ");
+        token = strtok(NULL, delimit);
     }
 
     //free the copy of the string
     free(oldstr);
-
-*/
 
     return wc;
 }
@@ -215,6 +214,20 @@ void wc_output(struct wc *wc){
     uint32_t offset = 0;
     uint32_t original_hash_code;
 
+    int j = 0;
+    while(j < table_size){
+
+        if(wc->entry[j].word != NULL){
+            curr_word = wc->entry[j].word;
+            curr_occurrence = wc->entry[j].count;
+            wc->entry[j].checked = true;
+            printf("%s:%d\n", curr_word, curr_occurrence);
+            offset = 0;
+        }
+        j++;
+    }
+
+/*
     char *oldstr = malloc(strlen(word_arrayGlobal) + 1);
     strcpy(oldstr, word_arrayGlobal);
 
@@ -263,6 +276,8 @@ void wc_output(struct wc *wc){
         token = strtok(NULL, " ");
     }
     free(oldstr);
+
+*/
 
 }
 
